@@ -48,6 +48,22 @@ def mostrar_codigo(ruta_script):
         print(f"Ocurrió un error al leer el archivo: {e}")
         return None
 
+def eliminar_tarea():
+    if not tareas:
+        print("No hay tareas para eliminar.\n")
+        return
+
+    mostrar_tareas()
+    try:
+        numero = int(input("Ingrese el número de la tarea a eliminar: "))
+        if 1 <= numero <= len(tareas):
+            tarea_eliminada = tareas.pop(numero - 1)
+            print(f"Tarea eliminada: [{tarea_eliminada['unidad']}] {tarea_eliminada['descripcion']}\n")
+        else:
+            print("Número inválido.\n")
+    except ValueError:
+        print("Debe ingresar un número válido.\n")
+
 def contar_tareas():
     print(f"Total de tareas registradas: {len(tareas)}\n")
 
