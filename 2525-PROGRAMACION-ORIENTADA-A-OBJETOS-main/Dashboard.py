@@ -23,6 +23,7 @@ def agregar_tarea():
     tareas.append(tarea)
     print("Tarea registrada correctamente.\n")
 
+
 def mostrar_tareas():
     if not tareas:
         print("No hay tareas registradas.\n")
