@@ -2,6 +2,8 @@
 # Adaptado por: Steven Tigse
 # Materia: Programación Orientada a Objetos
 # Descripción: Panel para organizar tareas y proyectos del curso
+# Adaptación realizada para la semana 8
+
 
 import os
 import subprocess
