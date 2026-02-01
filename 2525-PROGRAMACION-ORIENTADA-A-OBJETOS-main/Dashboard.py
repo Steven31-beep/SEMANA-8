@@ -8,6 +8,30 @@
 import os
 import subprocess
 
+# Lista para almacenar tareas
+tareas = []
+
+def agregar_tarea():
+    unidad = input("Ingrese la unidad (ejemplo: Unidad 1): ")
+    descripcion = input("Ingrese la descripción de la tarea: ")
+    
+    tarea = {
+        "unidad": unidad,
+        "descripcion": descripcion
+    }
+    
+    tareas.append(tarea)
+    print("Tarea registrada correctamente.\n")
+
+def mostrar_tareas():
+    if not tareas:
+        print("No hay tareas registradas.\n")
+    else:
+        print("\n Lista de tareas:")
+        for i, tarea in enumerate(tareas, start=1):
+            print(f"{i}. [{tarea['unidad']}] {tarea['descripcion']}")
+        print()
+
 def mostrar_codigo(ruta_script):
     # Asegúrate de que la ruta al script es absoluta
     ruta_script_absoluta = os.path.abspath(ruta_script)
